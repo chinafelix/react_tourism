@@ -1,0 +1,118 @@
+@import "../../static/css/common";
+
+.home{
+  @include content_flex;
+  .weaher_notice{
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 30px;
+    .weather_box{
+      padding-bottom: 40px;
+      display: flex;
+      align-items: center;
+      .title{
+        flex: 1;
+        align-items: center;
+        .top{
+          display: flex;
+          align-items: center;
+          p{
+            &.middle{
+              font-weight: 700;
+            }
+            &:not(:last-child){
+              padding-right: 10px;
+            }
+          }
+        }
+        .bottom{
+          color: rgba($grey, 0.5);
+          margin-top: 10px;
+          padding-left: 40px;
+          @include bg-image('../../static/images/dizhi');
+          @include bg-att(0,center,no-repeat,auto,80%);
+        }
+      }
+      .phone{
+        width: 70px;
+        height: 70px;
+        @include bg-image('../../static/images/dianhua-2');
+        @include bg-att(100%,center,no-repeat,auto,100%);
+      }
+    }
+    .notice{
+      display: flex;
+      justify-content: space-between;
+      .item{
+        width: calc(50% - 15px);
+        padding: 20px;
+        background-color: $light_green;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >div{
+          p.mini{
+            color: rgba($grey, 0.6);
+          }
+        }
+        .arr{
+          @include arr_direct(rgba($grey, 0.5), 45deg, 20px, 20px);
+        }
+      }
+    }
+  }
+
+  .news_box{
+    padding: 20px 30px;
+    background-color: #fff;
+    .title{
+      height: 80px;
+      @include border-1px($light_grey);
+      display: flex;
+      justify-content: space-between;
+      >p{
+        font-weight: 700;
+        line-height: 80px;
+      }
+      >div{
+        color: rgba($grey, 0.5);
+        display: flex;
+        align-items: center;
+        .arr{
+          @include arr_direct(rgba($grey, 0.5), 45deg, 20px, 20px);
+        }
+      }
+    }
+    .news_list{
+      .item{
+        overflow: hidden;
+        padding: 20px 0;
+        @include border-1px($light_grey);
+        display: flex;
+        img{
+          width: 236px;
+          border-radius: 10px;
+        }
+        .info{
+          flex: 1;
+          //height: 100%;
+          padding-left: 20px;
+          //float: left;
+          width: calc(100% - 236px);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .hd_news{
+            width: 380px;
+            font-weight: 700;
+            @include ellipsis;
+          }
+          .small{
+            color: rgba($grey, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+

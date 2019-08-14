@@ -1,0 +1,97 @@
+@import "../../static/css/common";
+
+.personal{
+  @include content_flex;
+  .content{
+    .personal_info{
+      height: 428px;
+      margin-bottom: 20px;
+      @include bg-image('../../static/images/beijing');
+      @include bg-att(0, 0, no-repeat, 100%, auto);
+      padding-top: 166px;
+      .personal_info_box{
+        width: 690px;
+        height: 262px;
+        margin: 0 auto 0;
+        background-color: #fff;
+        border-radius: 8px;
+        @include bg-image('../../static/images/Bitmap');
+        @include bg-att(0, 0, no-repeat, 100%, auto);
+        text-align: center;
+        .avatar{
+          transform: translateY(-50%);
+        }
+        .user_info{
+          .middle{
+            width: 232px;
+            height: 76px;
+            line-height: 76px;
+            margin: 0 auto;
+            background-color: $green;
+            color: #fff;
+            border-radius: 38px;
+            margin-top: -40px;
+            margin-bottom: 24px;
+          }
+        }
+        >p{
+          color: rgba($grey, 0.5);
+        }
+      }
+    }
+    .ticket_type{
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+      >div{
+        padding-top: 104px;
+        @include bg-att(center, 30px, no-repeat, 80%, auto);
+      }
+      .nopay{
+        @include bg-image('../../static/images/zhifu');
+      }
+      .nouse{
+        @include bg-image('../../static/images/daishiyong');
+      }
+      .used{
+        @include bg-image('../../static/images/yishiyong');
+      }
+      .cenceled{
+        @include bg-image('../../static/images/yiquxiao');
+      }
+    }
+    .common_wrapper{
+      background-color: #fff;
+      height: 116px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      p{
+        padding-left: 50px;
+        @include bg-att(left, center, no-repeat, auto, 80%);
+      }
+      .us_avatar{
+        @include bg-image('../../static/images/guanyuwomen-');
+      }
+      .arr{
+        @include arr_direct(rgba($grey, 0.6), 45deg, 25px, 25px);
+      }
+    }
+    .customer_wrapper{
+      @include border-1px(rgba($grey, 0.1));
+      p{
+        @include bg-image('../../static/images/renyuan-2');
+      }
+    }
+    .set_wrapper{
+      margin-top: 10px;
+      p{
+        @include bg-image('../../static/images/shezhi');
+      }
+    }
+
+  }
+}

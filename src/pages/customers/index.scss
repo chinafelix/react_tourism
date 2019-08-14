@@ -1,0 +1,37 @@
+@import "../../static/css/common";
+
+.box{
+  @include content_flex;
+  .content{
+    padding: 20px 30px;
+    .item{
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      border: 2px solid transparent;
+      .phone{
+        padding: 20px 0 10px 0;
+      }
+      .margin{
+        color: rgba($grey, 0.5);
+      }
+      .middle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span:last-child{
+          width: 80px;
+          height: 50px;
+          @include bg-image('../../static/images/bianji');
+          @include bg-att(center, center, no-repeat, auto, 70%);
+        }
+      }
+      &.active{
+        border: 2px solid $green;
+        @include bg-image('../../static/images/xuanzhong');
+        @include bg-att(right, 102%, no-repeat, auto, 20%);
+      }
+    }
+  }
+}

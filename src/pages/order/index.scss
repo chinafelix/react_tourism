@@ -1,0 +1,159 @@
+@import "../../static/css/common";
+
+.order_info_box{
+  @include content_flex ;
+  .content{
+    .order_info_detail{
+      margin-top: 10px;
+      background-color: #fff;
+      .order_info_info{
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include border-1px(rgba($grey, 0.2));
+        .order_info_info_left{
+          .small{
+            color: rgba($grey, 0.5);
+            margin-top: 10px;
+            &.hot{
+              padding: 2px 8px;
+              color: #fff;
+              background-color: rgba($orange, 1);
+            }
+          }
+          .normal{
+            margin-top: 10px;
+            .arr{
+              @include arr_direct(rgba($grey, 0.6), 45deg, 15px, 15px);
+            }
+          }
+        }
+        .order_info_info_right{
+          color: $orange;
+        }
+      }
+
+      .order_info_date{
+        padding: 30px;
+        background-color: #fff;
+        .order_info_date_middle{
+          display: flex;
+          .item{
+            flex: 1;
+            border: 2px solid rgba($grey, 0.3);
+            padding: 10px 0;
+            border-radius: 8px;
+            text-align: center;
+            &:not(:last-child){
+              margin-right: 12px;
+            }
+            &.more{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .arr{
+              @include arr_direct(rgba($grey, 0.5), 45deg, 15px, 15px);
+            }
+            &.disabled{
+              color: rgba($grey, 0.4);
+              border-color: rgba($grey, 0.1);
+            }
+            &.active{
+              border-color: $green;
+              @include bg-image('../../static/images/xuanzhong');
+              @include bg-att(right, 108%, no-repeat, 30%, auto)
+            }
+          }
+        }
+        .order_info_date_bottom{
+          margin-top: 42px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .numbers{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+              width: 76px;
+              height: 76px;
+              text-align: center;
+              line-height: 76px;
+              @include bg-att(center, center, no-repeat, 40%, auto);
+              &:first-child{
+                border: 1px solid rgba($green, 1);
+                background-color: $light_green;
+                background-image: url('../../static/images/less.png');
+              }
+              &:last-child{
+                border: 1px solid rgba($green, 1);
+                background-color: $light_green;
+                background-image: url('../../static/images/plus.png');
+              }
+            }
+            .number{
+              border-top: 1px solid rgba($green, 1);
+              border-bottom: 1px solid rgba($green, 1);
+            }
+          }
+        }
+      }
+    }
+    .customer_info{
+      padding: 20px 30px;
+      background-color: #fff;
+      margin-top: 10px;
+      .customer_info_title{
+        font-weight: 700;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p:last-child{
+          width: 50px;
+          height: 50px;
+          @include bg-image('../../static/images/renyuanguanli');
+          @include bg-att(right, center, no-repeat, 80%, auto);
+        }
+      }
+      .customer_info_ctx{
+        .item{
+          height: 100px;
+          display: flex;
+          align-items: center;
+          &:not(:last-child){
+            @include border-1px(rgba($grey, 0.1));
+          }
+          span{
+            width: 120px;
+          }
+          input{
+            flex: 1;
+            border: 0;
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+
+  }
+  .money_btn{
+    height: 112px;
+    display: flex;
+    >div{
+      flex: 1;
+      height: 112px;
+      line-height: 112px;
+      text-align: center;
+    }
+    .btn_left{
+      color: $orange;
+    }
+    .btn_right{
+      color: #fff;
+      background-color: $green;
+    }
+  }
+}

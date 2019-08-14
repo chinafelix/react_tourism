@@ -1,0 +1,77 @@
+@import "../static/css/common";
+
+
+//header组件
+.header_box{
+  height: 80px;
+  background-color: $green;
+  display: flex;
+  >div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .left{
+    flex: 1;
+    >div{
+      width: 100%;
+      height: 100%;
+    }
+    .back{
+      @include arr_direct(#fff, -135deg, 20px, 20px);
+    }
+  }
+  .center{
+    flex: 6;
+  }
+  .right{
+    flex: 1;
+  }
+}
+
+
+//nav组件
+.nav_wrapper{
+  height: 100px;
+  background-color: $white;
+  .nav_box{
+    height: 88px;
+    margin-top: 12px;
+    box-shadow: 0 -2px 12px rgba($grey, 0.2);
+    display: flex;
+    >div{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .common{
+        width: 100%;
+        height: 40px;
+        @include bg-att(center, 0, no-repeat, auto, 100%);
+        &.home_nav{
+          @include bg-image('../static/images/shouye-1');
+        }
+        &.buyer_nav{
+          @include bg-image('../static/images/navigoumai-1');
+        }
+        &.personal_nav{
+          @include bg-image('../static/images/gerenzhongxin-1');
+        }
+      }
+      &.active{
+        color: $green;
+        .home_nav{
+          @include bg-image('../static/images/shouye');
+        }
+        .buyer_nav{
+          @include bg-image('../static/images/navigoumai');
+        }
+        .personal_nav{
+          @include bg-image('../static/images/gerenzhongxin');
+        }
+      }
+    }
+  }
+}
